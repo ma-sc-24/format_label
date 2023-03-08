@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
             child: FormatLabel(
-                mainText: 'Aminals:',
-                text: 'Dog, cat, duck, hippo, bird, tiger',
-                mainColor: Colors.black,
-                descriptionColor: Colors.black)),
+          mainText: 'Aminals:',
+          description: 'Dog, cat, duck, hippo, bird, tiger',
+          textColor: Colors.black,
+          mainTextWeight: FontWeight.bold,
+        )),
       ),
     );
   }

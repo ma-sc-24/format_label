@@ -6,8 +6,8 @@ A Flutter package that allow to have a bold and normal font weight in a same lin
 ```dart
 FormatLabel(
     mainText: 'Aminals:',
-    text: 'Dog, cat, duck, hippo, bird, tiger',
-    mainColor: Colors.black,
-    descriptionColor: Colors.black
+    description: 'Dog, cat, duck, hippo, bird, tiger',
+    textColor: Colors.black,
+    mainTextWeight: FontWeight.bold,
 )
 ```
