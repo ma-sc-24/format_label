@@ -12,12 +12,15 @@ class MyApp extends StatelessWidget {
       title: 'Format Text',
       home: Scaffold(
         body: Center(
-            child: FormatLabel(
-          mainText: 'Aminals:',
-          description: 'Dog, cat, duck, hippo, bird, tiger',
-          textColor: Colors.black,
-          mainTextWeight: FontWeight.bold,
-        )),
+          child: FormatLabel(
+            mainText: 'Animals',
+            description: 'Dog, cat, duck, hippo, bird, tiger',
+            mainTextStyle: TextStyle(
+                fontSize: 14, fontWeight: FontWeight.w700, color: Colors.red),
+            descriptionTextStyle: TextStyle(
+                fontSize: 14, fontWeight: FontWeight.w300, color: Colors.teal),
+          ),
+        ),
       ),
     );
   }

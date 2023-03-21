@@ -1,3 +1,8 @@
+## 2.0.0
+* Add mainTextStyle and descriptionTextStyle.
+* Remove text color attribute.
+* Set mainFontWeight optional.
+
 ## 1.0.0
 * Generalize text color.
 * Fix description text name.

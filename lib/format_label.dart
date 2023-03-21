@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 /// Main class
-/// [size], [maxLines] and [textAlign] are optional properties
+/// [descriptionTextWeight], [mainTextWeight], [maxLines] and [textAlign] are optional properties
 class FormatLabel extends StatelessWidget {
   final String mainText;
   final String description;
-  final Color textColor;
-  final FontWeight mainTextWeight;
+  final TextStyle mainTextStyle;
+  final TextStyle descriptionTextStyle;
+  final FontWeight? mainTextWeight;
   final FontWeight? descriptionTextWeight;
-  final double? size;
   final int? maxLines;
   final TextAlign? textAlign;
 
@@ -17,10 +17,10 @@ class FormatLabel extends StatelessWidget {
     Key? key,
     required this.mainText,
     required this.description,
-    required this.textColor,
-    required this.mainTextWeight,
+    required this.mainTextStyle,
+    required this.descriptionTextStyle,
+    this.mainTextWeight,
     this.descriptionTextWeight = FontWeight.normal,
-    this.size = 14,
     this.maxLines = 1,
     this.textAlign = TextAlign.left,
   }) : super(key: key);
@@ -31,16 +31,15 @@ class FormatLabel extends StatelessWidget {
         textAlign: textAlign!,
         maxLines: maxLines,
         text: TextSpan(
-            style: TextStyle(
-                fontSize: size, color: textColor, fontWeight: mainTextWeight),
+            style: (mainTextWeight == null)
+                ? mainTextStyle
+                : mainTextStyle.copyWith(fontWeight: mainTextWeight),
             text: '$mainText: ',
             children: [
               TextSpan(
                   text: description,
-                  style: TextStyle(
-                      fontSize: size,
-                      fontWeight: descriptionTextWeight,
-                      color: textColor))
+                  style: descriptionTextStyle.copyWith(
+                      fontWeight: descriptionTextWeight))
             ]));
   }
 }
