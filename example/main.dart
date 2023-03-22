@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: FormatLabel(
-            mainText: 'Animals',
+            mainText: 'Animals:',
             description: 'Dog, cat, duck, hippo, bird, tiger',
             mainTextStyle: TextStyle(
                 fontSize: 14, fontWeight: FontWeight.w700, color: Colors.red),

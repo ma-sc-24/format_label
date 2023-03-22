@@ -34,7 +34,7 @@ class FormatLabel extends StatelessWidget {
             style: (mainTextWeight == null)
                 ? mainTextStyle
                 : mainTextStyle.copyWith(fontWeight: mainTextWeight),
-            text: '$mainText: ',
+            text: '$mainText ',
             children: [
               TextSpan(
                   text: description,

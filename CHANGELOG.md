@@ -1,3 +1,6 @@
+## 2.0.1
+* Remove colon after main text.
+
 ## 2.0.0
 * Add mainTextStyle and descriptionTextStyle.
 * Remove text color attribute.
