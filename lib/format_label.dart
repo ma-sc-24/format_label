@@ -7,8 +7,8 @@ class FormatLabel extends StatelessWidget {
   final String description;
   final TextStyle mainTextStyle;
   final TextStyle descriptionTextStyle;
-  final FontWeight? mainTextWeight;
-  final FontWeight? descriptionTextWeight;
+  final FontWeight mainTextWeight;
+  final FontWeight descriptionTextWeight;
   final int? maxLines;
   final TextAlign? textAlign;
 
@@ -19,7 +19,7 @@ class FormatLabel extends StatelessWidget {
     required this.description,
     required this.mainTextStyle,
     required this.descriptionTextStyle,
-    this.mainTextWeight,
+    this.mainTextWeight = FontWeight.bold,
     this.descriptionTextWeight = FontWeight.normal,
     this.maxLines = 1,
     this.textAlign = TextAlign.left,
@@ -31,9 +31,7 @@ class FormatLabel extends StatelessWidget {
         textAlign: textAlign!,
         maxLines: maxLines,
         text: TextSpan(
-            style: (mainTextWeight == null)
-                ? mainTextStyle
-                : mainTextStyle.copyWith(fontWeight: mainTextWeight),
+            style: mainTextStyle.copyWith(fontWeight: mainTextWeight),
             text: '$mainText ',
             children: [
               TextSpan(

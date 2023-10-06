@@ -1,3 +1,7 @@
+## 2.1.0
+* Change mainTextWeight form required to optional.
+* Add image example in README file.
+
 ## 2.0.1
 * Remove colon after main text.
 

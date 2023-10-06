@@ -1,10 +1,10 @@
 name: format_label
 description: A Flutter package that allow to have a bold and normal font weight in a same line, like a title-description format.
-version: 2.0.1
+version: 2.1.0
 homepage: https://github.com/ma-sc-24/format_label
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: '>=2.19.2 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
